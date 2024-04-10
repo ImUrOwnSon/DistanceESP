@@ -13,10 +13,10 @@ local function esp(p,cr)
 
     local text = Drawing.new("Text")
     text.Visible = true
-    text.Center = false 
+    text.Center =  true 
     text.Outline = true 
     text.Font = 2
-    text.Color = Color3.fromRGB(255,255,255)
+    text.Color = Color3.fromRGB(170,0,255)
     text.Size = 13
 
     local c1 
@@ -56,7 +56,7 @@ local function esp(p,cr)
         local hrp_pos,hrp_os = c:WorldToViewportPoint(hrp.Position)
         if hrp_os then
             text.Position = Vector2.new(hrp_pos.X,hrp_pos.Y)
-            text.Text = p.Name .. ' ('..tostring(math.floor(getdistancefc(hrp)))..' ms)'
+            text.Text = p.Name .. ' ('..tostring(math.floor(getdistancefc(hrp)))..' M)'
             text.Visible = true 
         else
             text.Visible = false 
